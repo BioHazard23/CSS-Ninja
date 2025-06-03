@@ -1,4 +1,6 @@
-/* Estilos Generales */
+/* ============================
+   1. ESTILOS GENERALES.
+============================= */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -76,15 +78,16 @@ footer {
     margin-top: 20px;
 }
 
-/* Paso 2: Selectores y Especificidad */
-/* Selector de etiqueta */
+/* ============================
+   2. SELECTORES DE ETIQUETA.
+============================= */
 p {
-    color: #555; /* Color base para párrafos */
+    color: #555;
 }
 
 /* Selector de clase */
 .parrafo-ejemplo {
-    color: #007bff; /* Azul */
+    color: #007bff;
     font-weight: bold;
 }
 
@@ -97,59 +100,59 @@ p {
 
 /* Conflicto y especificidad */
 .conflicto {
-    color: red !important; /* Este podría ser un mal hábito, pero es para demostrar */
+    color: red;
     font-style: italic;
 }
 
-#conflicto-id { /* Un ID tiene mayor especificidad que una clase */
-    color: green; /* Este color ganará sobre el rojo de .conflicto sin !important */
+#conflicto-id { 
+    color: green; 
     font-weight: bold;
     border: 1px solid green;
     padding: 5px;
 }
 
-/* Para anular !important, se necesitaría otro !important con mayor especificidad o en una regla posterior */
-/* div#conflicto-id.conflicto { color: purple !important; } */
-
-
-/* Paso 3: Colores, Fondos, Bordes y Sombras */
+/* ============================
+   3. COLORES, FONDOS Y SOMBRAS.
+============================= */
 .elemento-visual {
-    background-color: #f8f9fa; /* Color de fondo suave */
-    color: #212529; /* Color de texto oscuro */
-    border: 2px dashed #6c757d; /* Borde personalizado */
-    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f8f9fa;
+    color: #212529;
+    border: 2px dashed #6c757d;
+    border-radius: 8px;
     padding: 15px;
     margin-top: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .fondo-gradiente {
     padding: 20px;
     margin-top: 15px;
     color: white;
-    background-image: linear-gradient(to right, #007bff, #0056b3); /* Fondo con gradiente */
+    background-image: linear-gradient(to right, #007bff, #0056b3);
     border-radius: 5px;
 }
 
-
-/* Paso 4: Modelo de Caja */
+/* ============================
+   4. MODELO DE CAJA.
+============================= */
 .caja-modelo {
     background-color: #e2e6ea;
-    padding: 20px; /* Espacio interno */
-    border: 3px solid #adb5bd; /* Borde */
-    margin: 15px; /* Espacio externo */
-    width: auto; /* Ancho automático según contenido y padding/border */
-    box-sizing: border-box; /* Incluye padding y border en el width/height total */
+    padding: 20px; 
+    border: 3px solid #adb5bd;
+    margin: 15px; 
+    width: auto;
+    box-sizing: border-box; 
 }
 
 .otra-caja {
     background-color: #d4edda;
     border-color: #c3e6cb;
-    margin-top: 30px; /* Mayor margen superior para separarse de la anterior */
+    margin-top: 30px;
 }
 
-
-/* Paso 5: Disposición con Display y Position */
+/* ============================
+   5. DISPOSICION CON DISPLAY Y POSITION.
+============================= */
 .contenedor-display {
     background-color: #f0f0f0;
     padding: 10px;
@@ -158,14 +161,14 @@ p {
 }
 
 .display-inline {
-    display: inline; /* Se comporta como texto, en línea */
+    display: inline;
     background-color: #ffc107;
     padding: 5px;
     margin-right: 5px;
 }
 
 .display-inline-block {
-    display: inline-block; /* En línea, pero respeta width/height/margin/padding vertical */
+    display: inline-block;
     background-color: #17a2b8;
     color: white;
     padding: 10px;
@@ -176,7 +179,7 @@ p {
 }
 
 .display-block {
-    display: block; /* Ocupa todo el ancho disponible, uno debajo del otro */
+    display: block;
     background-color: #28a745;
     color: white;
     padding: 10px;
@@ -184,8 +187,8 @@ p {
 }
 
 .contenedor-flex {
-    display: flex; /* Activa Flexbox */
-    justify-content: space-around; /* Distribuye los ítems */
+    display: flex;
+    justify-content: space-around;
     background-color: #6f42c1;
     padding: 15px;
     border-radius: 5px;
@@ -199,44 +202,44 @@ p {
     margin: 5px;
     border-radius: 3px;
     text-align: center;
-    flex-grow: 1; /* Permite que los ítems crezcan */
+    flex-grow: 1;
 }
 .flex-item:nth-child(2) {
-    flex-grow: 2; /* Este ítem crecerá el doble que los otros */
+    flex-grow: 2;
 }
 
 
 .contenedor-posicion {
     background-color: #fff3cd;
     padding: 15px;
-    height: 200px; /* Altura para ver el efecto de 'fixed' y 'absolute' */
+    height: 200px;
     border: 1px solid #ffeeba;
     margin-top: 20px;
 }
 
 .posicion-relativa {
-    position: relative; /* Base para elementos absolutos anidados */
+    position: relative;
     background-color: #dc3545;
     color: white;
     padding: 10px;
     width: 70%;
     height: 100px;
-    z-index: 1; /* Controla el apilamiento */
+    z-index: 1;
 }
 
 .posicion-absoluta {
-    position: absolute; /* Posicionado relativo al ancestro posicionado más cercano */
+    position: absolute;
     top: 10px;
     right: 10px;
     background-color: #007bff;
     color: white;
     padding: 8px;
     width: 120px;
-    z-index: 2; /* Se mostrará encima de .posicion-relativa */
+    z-index: 2;
 }
 
 .posicion-fija {
-    position: fixed; /* Posicionado relativo a la ventana del navegador */
+    position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #fd7e14;
@@ -244,11 +247,12 @@ p {
     padding: 10px 15px;
     border-radius: 20px;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
-    z-index: 1000; /* Asegura que esté por encima de casi todo */
+    z-index: 1000;
 }
 
-
-/* Paso 6: Efectos Visuales */
+/* ============================
+   6. EFECTOS VISUALES.
+============================= */
 .transformacion-contenedor {
     display: flex;
     justify-content: space-around;
@@ -266,19 +270,19 @@ p {
     align-items: center;
     text-align: center;
     border-radius: 5px;
-    transition: transform 0.3s ease-in-out; /* Transición suave para transformaciones */
+    transition: transform 0.3s ease-in-out; 
 }
 
 .girar:hover {
-    transform: rotate(45deg); /* Gira el elemento al pasar el cursor */
+    transform: rotate(45deg); 
 }
 
 .escalar:hover {
-    transform: scale(1.2); /* Escala el elemento */
+    transform: scale(1.2); 
 }
 
 .mover:hover {
-    transform: translateX(20px); /* Mueve el elemento horizontalmente */
+    transform: translateX(20px);
 }
 
 .boton-interactivo {
@@ -292,12 +296,12 @@ p {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.boton-interactivo:hover { /* Pseudo-clase :hover */
+.boton-interactivo:hover { 
     background-color: #1baa80;
-    transform: translateY(-2px); /* Efecto de elevación leve */
+    transform: translateY(-2px); 
 }
 
-.boton-interactivo:active { /* Pseudo-clase :active */
+.boton-interactivo:active { 
     background-color: #179b77;
     transform: translateY(0px);
 }
@@ -309,21 +313,21 @@ p {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.input-foco:focus { /* Pseudo-clase :focus */
+.input-foco:focus { 
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none; /* Quita el outline por defecto del navegador si se usa box-shadow */
+    outline: none; 
 }
 
 .pseudo-elemento {
-    position: relative; /* Necesario para posicionar pseudo-elementos absolutos */
-    padding-left: 25px; /* Espacio para el ::before */
+    position: relative; 
+    padding-left: 25px; 
     margin-top: 15px;
     font-size: 1.1rem;
 }
 
-.pseudo-elemento::before { /* Pseudo-elemento ::before */
-    content: "ℹ️ "; /* Contenido que se inserta antes */
+.pseudo-elemento::before { 
+    content: "ℹ️ "; 
     color: #007bff;
     font-weight: bold;
     position: absolute;
@@ -331,8 +335,8 @@ p {
     top: 0;
 }
 
-.pseudo-elemento span[data-info]::after { /* Pseudo-elemento ::after con selector de atributo */
-    content: " (" attr(data-info) ")"; /* Muestra el valor del atributo data-info */
+.pseudo-elemento span[data-info]::after { 
+    content: " (" attr(data-info) ")"; 
     font-style: italic;
     color: #6c757d;
     font-size: 0.9em;
@@ -342,6 +346,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 150px;
     background-color: #e9f7fd;
     border-radius: 8px;
@@ -356,15 +361,17 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Círculo */
+    border-radius: 50%;
     font-weight: bold;
-    animation-name: palpitar; /* Nombre de la animación */
-    animation-duration: 2s; /* Duración */
-    animation-iteration-count: infinite; /* Repetir infinitamente */
-    animation-timing-function: ease-in-out; /* Curva de tiempo */
+    animation-name: palpitar;
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
 }
 
-/* Definición de la animación con @keyframes */
+/* ============================
+   7. ANIMACION CON @keyframes.
+============================= */
 @keyframes palpitar {
     0% {
         transform: scale(1);
