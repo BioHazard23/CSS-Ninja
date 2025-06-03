@@ -1,0 +1,396 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.navegacion-principal {
+    background-color: #444;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.navegacion-principal a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.navegacion-principal a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.seccion {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.seccion h2 {
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 40px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Paso 2: Selectores y Especificidad */
+/* Selector de etiqueta */
+p {
+    color: #555; /* Color base para párrafos */
+}
+
+/* Selector de clase */
+.parrafo-ejemplo {
+    color: #007bff; /* Azul */
+    font-weight: bold;
+}
+
+/* Selector de ID */
+#elemento-unico {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-left: 3px solid #007bff;
+}
+
+/* Conflicto y especificidad */
+.conflicto {
+    color: red !important; /* Este podría ser un mal hábito, pero es para demostrar */
+    font-style: italic;
+}
+
+#conflicto-id { /* Un ID tiene mayor especificidad que una clase */
+    color: green; /* Este color ganará sobre el rojo de .conflicto sin !important */
+    font-weight: bold;
+    border: 1px solid green;
+    padding: 5px;
+}
+
+/* Para anular !important, se necesitaría otro !important con mayor especificidad o en una regla posterior */
+/* div#conflicto-id.conflicto { color: purple !important; } */
+
+
+/* Paso 3: Colores, Fondos, Bordes y Sombras */
+.elemento-visual {
+    background-color: #f8f9fa; /* Color de fondo suave */
+    color: #212529; /* Color de texto oscuro */
+    border: 2px dashed #6c757d; /* Borde personalizado */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.fondo-gradiente {
+    padding: 20px;
+    margin-top: 15px;
+    color: white;
+    background-image: linear-gradient(to right, #007bff, #0056b3); /* Fondo con gradiente */
+    border-radius: 5px;
+}
+
+
+/* Paso 4: Modelo de Caja */
+.caja-modelo {
+    background-color: #e2e6ea;
+    padding: 20px; /* Espacio interno */
+    border: 3px solid #adb5bd; /* Borde */
+    margin: 15px; /* Espacio externo */
+    width: auto; /* Ancho automático según contenido y padding/border */
+    box-sizing: border-box; /* Incluye padding y border en el width/height total */
+}
+
+.otra-caja {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    margin-top: 30px; /* Mayor margen superior para separarse de la anterior */
+}
+
+
+/* Paso 5: Disposición con Display y Position */
+.contenedor-display {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.display-inline {
+    display: inline; /* Se comporta como texto, en línea */
+    background-color: #ffc107;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.display-inline-block {
+    display: inline-block; /* En línea, pero respeta width/height/margin/padding vertical */
+    background-color: #17a2b8;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+}
+
+.display-block {
+    display: block; /* Ocupa todo el ancho disponible, uno debajo del otro */
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.contenedor-flex {
+    display: flex; /* Activa Flexbox */
+    justify-content: space-around; /* Distribuye los ítems */
+    background-color: #6f42c1;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.flex-item {
+    background-color: #e83e8c;
+    color: white;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 3px;
+    text-align: center;
+    flex-grow: 1; /* Permite que los ítems crezcan */
+}
+.flex-item:nth-child(2) {
+    flex-grow: 2; /* Este ítem crecerá el doble que los otros */
+}
+
+
+.contenedor-posicion {
+    background-color: #fff3cd;
+    padding: 15px;
+    height: 200px; /* Altura para ver el efecto de 'fixed' y 'absolute' */
+    border: 1px solid #ffeeba;
+    margin-top: 20px;
+}
+
+.posicion-relativa {
+    position: relative; /* Base para elementos absolutos anidados */
+    background-color: #dc3545;
+    color: white;
+    padding: 10px;
+    width: 70%;
+    height: 100px;
+    z-index: 1; /* Controla el apilamiento */
+}
+
+.posicion-absoluta {
+    position: absolute; /* Posicionado relativo al ancestro posicionado más cercano */
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 8px;
+    width: 120px;
+    z-index: 2; /* Se mostrará encima de .posicion-relativa */
+}
+
+.posicion-fija {
+    position: fixed; /* Posicionado relativo a la ventana del navegador */
+    bottom: 20px;
+    right: 20px;
+    background-color: #fd7e14;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000; /* Asegura que esté por encima de casi todo */
+}
+
+
+/* Paso 6: Efectos Visuales */
+.transformacion-contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+.transformacion-elemento {
+    width: 80px;
+    height: 80px;
+    background-color: #6610f2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Transición suave para transformaciones */
+}
+
+.girar:hover {
+    transform: rotate(45deg); /* Gira el elemento al pasar el cursor */
+}
+
+.escalar:hover {
+    transform: scale(1.2); /* Escala el elemento */
+}
+
+.mover:hover {
+    transform: translateX(20px); /* Mueve el elemento horizontalmente */
+}
+
+.boton-interactivo {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #20c997;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-interactivo:hover { /* Pseudo-clase :hover */
+    background-color: #1baa80;
+    transform: translateY(-2px); /* Efecto de elevación leve */
+}
+
+.boton-interactivo:active { /* Pseudo-clase :active */
+    background-color: #179b77;
+    transform: translateY(0px);
+}
+
+.input-foco {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-foco:focus { /* Pseudo-clase :focus */
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none; /* Quita el outline por defecto del navegador si se usa box-shadow */
+}
+
+.pseudo-elemento {
+    position: relative; /* Necesario para posicionar pseudo-elementos absolutos */
+    padding-left: 25px; /* Espacio para el ::before */
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.pseudo-elemento::before { /* Pseudo-elemento ::before */
+    content: "ℹ️ "; /* Contenido que se inserta antes */
+    color: #007bff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.pseudo-elemento span[data-info]::after { /* Pseudo-elemento ::after con selector de atributo */
+    content: " (" attr(data-info) ")"; /* Muestra el valor del atributo data-info */
+    font-style: italic;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.animacion-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #e9f7fd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.elemento-animado {
+    width: 100px;
+    height: 100px;
+    background-color: #ff6b6b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Círculo */
+    font-weight: bold;
+    animation-name: palpitar; /* Nombre de la animación */
+    animation-duration: 2s; /* Duración */
+    animation-iteration-count: infinite; /* Repetir infinitamente */
+    animation-timing-function: ease-in-out; /* Curva de tiempo */
+}
+
+/* Definición de la animación con @keyframes */
+@keyframes palpitar {
+    0% {
+        transform: scale(1);
+        background-color: #ff6b6b;
+    }
+    50% {
+        transform: scale(1.2);
+        background-color: #ff8787;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #ff6b6b;
+    }
+}
+
+@keyframes moverYColor {
+    0% {
+        transform: translateX(0);
+        background-color: #007bff;
+    }
+    50% {
+        transform: translateX(50px);
+        background-color: #28a745;
+    }
+    100% {
+        transform: translateX(0);
+        background-color: #007bff;
+    }
+}
