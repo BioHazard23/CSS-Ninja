@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenamiento Módulo 2 Semana 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Entrenamiento CSS Avanzado 🎨</h1>
+    </header>
+
+    <nav class="navegacion-principal">
+        <a href="#selectores">Selectores</a>
+        <a href="#visuales">Visuales</a>
+        <a href="#caja">Modelo Caja</a>
+        <a href="#disposicion">Disposición</a>
+        <a href="#efectos">Efectos</a>
+    </nav>
+
+    <main>
+        <section id="selectores" class="seccion">
+            <h2>Paso 2: Selectores y Especificidad</h2>
+            <p class="parrafo-ejemplo">Este es un párrafo con una clase.</p>
+            <div id="elemento-unico">Este es un div con un ID.</div>
+            <p>Este es un párrafo sin clase ni ID, solo etiqueta.</p>
+            <div class="conflicto">Este div tiene una clase.</div>
+            <div id="conflicto-id" class="conflicto">Este div tiene la misma clase y un ID (mayor especificidad).</div>
+        </section>
+
+        <hr>
+
+        <section id="visuales" class="seccion">
+            <h2>Paso 3: Colores, Fondos, Bordes y Sombras</h2>
+            <div class="elemento-visual">
+                <p>Este elemento tiene fondo, borde y sombra.</p>
+            </div>
+            <div class="fondo-gradiente">
+                <p>Fondo con gradiente.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="caja" class="seccion">
+            <h2>Paso 4: Modelo de Caja (Margin, Padding, Border)</h2>
+            <div class="caja-modelo">
+                <p>Contenido dentro de la caja. Observa el padding, borde y margen.</p>
+            </div>
+            <div class="caja-modelo otra-caja">
+                <p>Otra caja para ver el margen entre ellas.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="disposicion" class="seccion">
+            <h2>Paso 5: Disposición con Display y Position</h2>
+            <div class="contenedor-display">
+                <span class="display-inline">Elemento inline ↔️</span>
+                <span class="display-inline-block">Elemento inline-block 🧱</span>
+                <div class="display-block">Elemento block 🟩</div>
+            </div>
+
+            <div class="contenedor-flex">
+                <div class="flex-item">Flex Item 1</div>
+                <div class="flex-item">Flex Item 2</div>
+                <div class="flex-item">Flex Item 3</div>
+            </div>
+
+            <div class="contenedor-posicion">
+                <div class="posicion-relativa">
+                    Soy un elemento con posición relativa.
+                    <div class="posicion-absoluta">Soy absoluto 🎯, relativo a mi padre.</div>
+                </div>
+                <div class="posicion-fija">Soy fijo ⚓</div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="efectos" class="seccion">
+            <h2>Paso 6: Efectos Visuales</h2>
+            <div class="transformacion-contenedor">
+                <div class="transformacion-elemento girar">Girar 🔄</div>
+                <div class="transformacion-elemento escalar">Escalar 🔍</div>
+                <div class="transformacion-elemento mover">Mover ➡️</div>
+            </div>
+
+            <button class="boton-interactivo">Pasa el cursor sobre mí🖱️</button>
+            <input type="text" class="input-foco" placeholder="Haz foco aquí ✨">
+
+            <p class="pseudo-elemento">Texto con pseudo-elementos.
+                <span data-info="ℹ️ Info extra"></span>
+            </p>
+
+            <div class="animacion-contenedor">
+                <div class="elemento-animado">Animación! 🚀</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Página de Entrenamiento CSS</p>
+    </footer>
+
+</body>
+</html>
